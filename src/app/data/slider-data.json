@@ -1,0 +1,31 @@
+[
+    {
+      "id": 1,
+      "title": "Best Seller",
+      "tagline": "Creative Sofa",
+      "image": "https://furns-react.netlify.app/images/slider-image/slider-2.png",
+      "buttons": [
+        {
+          "id": 1,
+          "text": "Shop Now",
+          "link": "https://furns-react.netlify.app/images/slider-image/slider-2.png",
+          "type": "btn-dark btn-circle"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "New Products",
+      "tagline": "Flexible Chair",
+      "image": "https://furns-react.netlify.app/images/slider-image/slider-1.png",
+      "buttons": [
+        {
+          "id": 1,
+          "text": "Shop Now",
+          "link": "https://furns-react.netlify.app/images/slider-image/slider-1.png",
+          "type": "btn-dark btn-circle"
+        }
+      ]
+    }
+  ]
+  
