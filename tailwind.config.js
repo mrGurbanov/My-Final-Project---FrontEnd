@@ -6,6 +6,9 @@ module.exports = {
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
+    fontFamily: {
+      'ral': ['Raleway'],
+    },
     extend: {},
   },
   plugins: [],

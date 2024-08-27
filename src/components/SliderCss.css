@@ -1,0 +1,35 @@
+.swiper-button-next, .swiper-button-prev {
+    color: #212121 !important;
+    background-color: #fff;
+    border-radius: 50%;
+    width: 40px !important;
+    height: 40px !important;
+    text-align: center;
+    margin: auto;
+    transition: 250ms ease-in-out;
+    border: 2px solid transparent;
+  
+    &::after {
+      font-size: 18px !important;
+      transition: 250ms ease-in-out;
+      font-weight: 600;
+    }
+  
+    &:hover {
+      background-color: var(--primary-orange) !important;
+      border: 2px solid #ffe75f;
+  
+      &::after {
+        color: white;
+      }
+    }
+  }
+  .swiper-pagination {
+  
+    > .swiper-pagination-bullet {
+      background-color: var(--primary-orange) !important;
+      width: 14px !important;
+      height: 14px !important;
+      border: 2px solid #ffe75f;
+    }
+  }

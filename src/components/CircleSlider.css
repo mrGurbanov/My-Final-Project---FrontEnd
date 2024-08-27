@@ -1,17 +1,68 @@
-.swiper {
+
+
+.mySwiper {
+  .swiper {
     width: 100%;
-    padding-top: 50px;
-    padding-bottom: 50px;
+    height: 100%;
   }
   
   .swiper-slide {
-    background-position: center;
-    background-size: cover;
-    width: 300px;
-    height: 300px;
+    text-align: center;
+    background: #fff;
+    width: 210px !important;
+
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    > .slider-border {
+      position: relative;
+      transition: .4s ease-in-out;
+      margin-inline: auto;
+      -webkit-box-pack: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      &::after {
+        content: '';
+        width: 180px;
+        height: 180px;
+        text-align: center;
+        opacity: 0;
+        z-index: -1;
+        transition: .4s ease-in-out;
+        position: absolute;
+        border-radius: 50%;
+        border: 2px dashed var(--primary-orange);
+      }
+      
+      &:hover {
+        border: transparent;
+        transition: .4s;
+
+        &::after {
+          z-index: 2;
+          opacity: 1;
+          animation: spinBorder 9s linear 0s infinite normal none running;
+        }
+      }
+    }
   }
   
   .swiper-slide img {
     display: block;
     width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
+}
+@keyframes spinBorder {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

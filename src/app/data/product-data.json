@@ -1,0 +1,63 @@
+[
+    {
+        "id": 1,
+        "title": "Living Room Sets",
+        "old_price": 1540.0,
+        "price": 1520.0,
+        "image": "https://furns-react.netlify.app/_ipx/w_384,q_75/https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F0864%2F0607%2F0562%2Ffiles%2FNav1_LivingRoomFurniture.jpg%3Fv%3D1709032906?url=https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F0864%2F0607%2F0562%2Ffiles%2FNav1_LivingRoomFurniture.jpg%3Fv%3D1709032906&w=384&q=75"
+    },
+    {
+        "id": 2,
+        "title": "Sofa for living rooms",
+        "old_price": 130.0,
+        "price": 110.0,
+        "sale": 15,
+        "image": "https://furns-react.netlify.app/_ipx/w_384,q_75/https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F0864%2F0607%2F0562%2Fproducts%2F2_40d9c634-67d1-4623-a7d5-c2ef2b24db83.jpg%3Fv%3D1709108882?url=https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F0864%2F0607%2F0562%2Fproducts%2F2_40d9c634-67d1-4623-a7d5-c2ef2b24db83.jpg%3Fv%3D1709108882&w=384&q=75"
+    },
+    {
+        "id": 3,
+        "title": "10. This is the large title for testing large title and there is an image for testing",
+        "old_price": 21.0,
+        "price": 19.0,
+        "sale": 10,
+        "image": "https://furns-react.netlify.app/_ipx/w_384,q_75/https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F0864%2F0607%2F0562%2Fproducts%2F4_d2d85450-694d-4907-8abe-699534972db6.jpg%3Fv%3D1709108892?url=https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F0864%2F0607%2F0562%2Fproducts%2F4_d2d85450-694d-4907-8abe-699534972db6.jpg%3Fv%3D1709108892&w=384&q=75"
+    },
+    {
+        "id": 4,
+        "title": "11. Product with video",
+        "price": 39.0,
+        "sale": 10,
+        "image": "https://furns-react.netlify.app/_ipx/w_384,q_75/https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F0864%2F0607%2F0562%2Fproducts%2F6_cb7fa61b-c039-4b83-80dc-1b9c7a7efcfa.jpg%3Fv%3D1709108899?url=https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F0864%2F0607%2F0562%2Fproducts%2F6_cb7fa61b-c039-4b83-80dc-1b9c7a7efcfa.jpg%3Fv%3D1709108899&w=384&q=75"
+    },
+    {
+        "id": 5,
+        "title": "12. Unique content for each product on the product tab",
+        "old_price": 111.0,
+        "price": 99.0,
+        "sale": 11,
+        "image": "https://furns-react.netlify.app/_ipx/w_384,q_75/https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F0864%2F0607%2F0562%2Fproducts%2F1_ecaa91dc-998e-4ed2-b4a8-9206aa2ef4fc.jpg%3Fv%3D1709108907?url=https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F0864%2F0607%2F0562%2Fproducts%2F1_ecaa91dc-998e-4ed2-b4a8-9206aa2ef4fc.jpg%3Fv%3D1709108907&w=384&q=75"
+    },
+    {
+        "id": 6,
+        "title": "2. New badge product",
+        "price": 80.0,
+        "image": "https://furns-react.netlify.app/_ipx/w_384,q_75/https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F0864%2F0607%2F0562%2Fproducts%2F7_719e5f02-4525-4c10-b8fd-b45660b08de4.jpg%3Fv%3D1709108914?url=https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F0864%2F0607%2F0562%2Fproducts%2F7_719e5f02-4525-4c10-b8fd-b45660b08de4.jpg%3Fv%3D1709108914&w=384&q=75"
+    },
+    {
+        "id": 7,
+        "title": "3. Variable product",
+        "old_price": 85.0,
+        "price": 70.0,
+        "sale": 18,
+        "image": "https://furns-react.netlify.app/_ipx/w_384,q_75/https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F0864%2F0607%2F0562%2Fproducts%2F9_efb61c0c-4d33-4c9c-947b-deac1aa4391c.jpg%3Fv%3D1709108923?url=https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F0864%2F0607%2F0562%2Fproducts%2F9_efb61c0c-4d33-4c9c-947b-deac1aa4391c.jpg%3Fv%3D1709108923&w=384&q=75"
+    },
+    {
+        "id": 8,
+        "title": "4. Soldout product",
+        "old_price": 29.0,
+        "price": 19.0,
+        "sale": 34,
+        "stock": "STOCK OUT",
+        "image": "https://furns-react.netlify.app/_ipx/w_384,q_75/https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F0864%2F0607%2F0562%2Fproducts%2F11_bd15bae0-27a6-4649-b220-2ec0ac8bb522.jpg%3Fv%3D1709108934?url=https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F0864%2F0607%2F0562%2Fproducts%2F11_bd15bae0-27a6-4649-b220-2ec0ac8bb522.jpg%3Fv%3D1709108934&w=384&q=75"
+    }
+]

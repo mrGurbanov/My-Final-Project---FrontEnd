@@ -1,4 +1,5 @@
 "use client"; 
+import './SliderCss.css';
 
 import React from "react";
 
