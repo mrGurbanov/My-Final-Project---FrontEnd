@@ -5,6 +5,7 @@ import CircleSlider from "../components/CircleSlider";
 import Flex from "../components/Flex";
 import OurProducts from "../components/OurProducts";
 import { StyledEngineProvider } from "@mui/material";
+import { CartProvider } from "../components/CartContext";
 
 export default function Home() {
   return (
@@ -13,7 +14,8 @@ export default function Home() {
       <Flex className="py-[100px]">
         <CircleSlider />
       </Flex>
-      <StyledEngineProvider injectFirst>
+
+      <StyledEngineProvider injectFirst className="block">
         <OurProducts />
       </StyledEngineProvider>
     </>

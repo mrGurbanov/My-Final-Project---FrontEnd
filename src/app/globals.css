@@ -10,9 +10,11 @@
   --primary-bg: #2f333a;
   --primary-text-clr: #474747;
   --bg-shadow: rgb(0, 0, 0, 0.5);
-  --border-clr: rgb(235, 235, 235);
+  --border-clr: #ebebeb;
   --border: #43474e;
   --product-text-clr: #212121;
+  --view-cart-bg: #f4f5f8;
+  
 }
 
 * {
@@ -20,6 +22,7 @@
   margin: 0;
   box-sizing: border-box;
   font-family: "Open Sans", sans-serif;
+  user-select: none;
 }
 
 .container {

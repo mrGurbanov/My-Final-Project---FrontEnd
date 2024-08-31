@@ -60,11 +60,9 @@ const Slider: React.FC<DemoSliderProps> = ({ data }) => {
                       incididunt ut labore et dolore magna
                     </p>
                     {buttons.length > 0 ? (
-                      <Link
-                        href={"/"}
-                        className=" bg-[--primary-orange] hover:bg-[--primary-bg] duration-200 hover:text-[--primary-orange] inline-block px-9 py-2 text-white mt-10 lg:mt-20">
-                        <SliderButtons buttons={buttons} />
-                      </Link>
+                      
+                        <SliderButtons  buttons={buttons} />
+                      
                     ) : null}
                   </div>
                   <div className="w-1/2 h-full flex items-center bg-contain right-0 top-0 px-[15px]">

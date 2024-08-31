@@ -9,6 +9,7 @@ import { FaRegUser } from "react-icons/fa";
 import { useState } from "react";
 import SearchBar from "./SearchBar";
 import CartMenu from "./CartMenu";
+import { useCart } from "./CartContext";
 
 export default () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -24,6 +25,8 @@ export default () => {
   const toggleOpenCart = () => {
     setOpenCart(!openCart);
   };
+
+  const { cart } = useCart()
 
   return (
     <div className="relative">
@@ -143,7 +146,7 @@ export default () => {
                     as="span"
                     justifyContent={"center"}
                     className="absolute w-4 h-4 rounded-full text-[11px] -top-0 right-2 bg-[--primary-orange] text-white">
-                    0
+                    {cart.length}
                   </Flex>
                 </button>
               </Flex>
