@@ -10,7 +10,6 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 
 import SliderButtons from "./SliderButtons";
-import Link from "next/link";
 
 interface Slide {
   id: number;
@@ -34,7 +33,7 @@ interface DemoSliderProps {
 const Slider: React.FC<DemoSliderProps> = ({ data }) => {
   return (
     <section className="w-full">
-      <div className="h-dvh">
+      <div>
         <ul className=" w-full">
           <Swiper
             navigation

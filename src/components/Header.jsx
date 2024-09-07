@@ -26,7 +26,7 @@ export default () => {
     setOpenCart(!openCart);
   };
 
-  const { cart } = useCart()
+  const { cart } = useCart();
 
   return (
     <div className="relative">
@@ -101,11 +101,13 @@ export default () => {
         </Flex>
         <Flex className="header-middle py-[30px]">
           <Flex className="container" justifyContent={"space-between"}>
-            <Flex className="logo px-[15px]">
-              <img
-                src="https://furns-react.netlify.app/_ipx/w_1920,q_75/%2Fimages%2Flogo%2Flogo.png?url=%2Fimages%2Flogo%2Flogo.png&w=1920&q=75"
-                alt=""
-              />
+            <Flex className="logo px-[15px] cursor-pointer">
+              <Link href={"/"}>
+                <img
+                  src="https://furns-react.netlify.app/_ipx/w_1920,q_75/%2Fimages%2Flogo%2Flogo.png?url=%2Fimages%2Flogo%2Flogo.png&w=1920&q=75"
+                  alt="logo"
+                />
+              </Link>
             </Flex>
             <Flex className="px-[15px] font-thin text-white">
               <Flex className="px-[15px] py-[1px] border-r-2 border-[#ebebeb]">
@@ -164,44 +166,68 @@ export default () => {
                       <FaChevronDown />
                     </Link>
                     <ul>
-                      <li><Link href={"/"}>Home 1</Link></li>
-                      <li><Link href={"/"}>Home 2</Link></li>
+                      <li>
+                        <Link href={"/"}>Home 1</Link>
+                      </li>
+                      <li>
+                        <Link href={"/"}>Home 2</Link>
+                      </li>
                     </ul>
                   </li>
                   <li className="ml-10 text-white [&>a]:hover:text-[--primary-orange]">
-                    <Link className="duration-200 text-sm" href={"/about"}>About</Link>
+                    <Link className="duration-200 text-sm" href={"/about"}>
+                      About
+                    </Link>
                   </li>
                   <li className="dropdown-li">
                     <Link href={"/"} className="flex items-center ">
                       Home Furniture <FaChevronDown />
                     </Link>
                     <ul>
-                          <li><Link href={"/collection/bedroom"}>Bedroom</Link></li>
-                          <li><Link href={"/collection/dining"}>Dining</Link></li>
-                          <li><Link href={"/collection/living"}>Living</Link></li>
-                        </ul>
+                      <li>
+                        <Link href={"/collection/bedroom"}>Bedroom</Link>
+                      </li>
+                      <li>
+                        <Link href={"/collection/dining"}>Dining</Link>
+                      </li>
+                      <li>
+                        <Link href={"/collection/living"}>Living</Link>
+                      </li>
+                    </ul>
                   </li>
                   <li className="dropdown-li">
                     <Link href={"/"} className="flex items-center ">
                       Office Furniture <FaChevronDown />
                     </Link>
                     <ul>
-                          <li><Link href={"/collection/lounge"}>Lounge</Link></li>
-                          <li><Link href={"/collection/office-chair"}>Office Chair</Link></li>
-                          <li><Link href={"/collection/office-table"}>Office Table</Link></li>
-                        </ul>
+                      <li>
+                        <Link href={"/collection/lounge"}>Lounge</Link>
+                      </li>
+                      <li>
+                        <Link href={"/collection/office-chair"}>Office Chair</Link>
+                      </li>
+                      <li>
+                        <Link href={"/collection/office-table"}>Office Table</Link>
+                      </li>
+                    </ul>
                   </li>
                   <li className="dropdown-li">
                     <Link href={"/"} className="flex items-center ">
                       Hospital Furniture <FaChevronDown />
                     </Link>
                     <ul>
-                          <li><Link href={"/collection/hospital-bed"}>Hospital Bed</Link></li>
-                          <li><Link href={"/collection/hospital-utility"}>Hospital Utility</Link></li>
-                        </ul>
+                      <li>
+                        <Link href={"/collection/hospital-bed"}>Hospital Bed</Link>
+                      </li>
+                      <li>
+                        <Link href={"/collection/hospital-utility"}>Hospital Utility</Link>
+                      </li>
+                    </ul>
                   </li>
                   <li className="ml-10 text-white [&>a]:hover:text-[--primary-orange]">
-                    <Link className="duration-200 text-sm" href={"/contact"}>Contact</Link>
+                    <Link className="duration-200 text-sm" href={"/contact"}>
+                      Contact
+                    </Link>
                   </li>
                 </Flex>
               </Flex>

@@ -9,7 +9,6 @@ export default function ProductCart({product}) {
 
   const handleAddToCart = () => {
     addToCart(product);
-    alert(`${product.title} səbətə əlavə edildi!`);
   };
 
 
@@ -40,8 +39,6 @@ export default function ProductCart({product}) {
                         <i className="fa-solid fa-star"></i>
                         <i className="fa-solid fa-star"></i>
                         <i className="fa-solid fa-star"></i>
-                        {/* <span> ({product.rating.rate})</span>
-                        <div>Seller ({product.rating.count})</div> */}
                     </span>
                 </div>
                 <button onClick={handleAddToCart} className='text-center bg-black text-white py-2 px-14 rounded-md whitespace-nowrap'>Add to Cart</button>

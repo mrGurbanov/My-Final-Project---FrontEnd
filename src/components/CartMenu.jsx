@@ -68,7 +68,7 @@ export default ({ isOpen, onClose }) => {
             <Flex className="p-5 w-[350px] absolute bottom-0">
               <Link
                 href={"/cart"}
-                className="text-white mr-4 hover:bg-[--primary-bg] duration-200 pl-5 px-9 py-2 flex justify-between items-center bg-[--primary-orange] font-medium w-full text-left rounded-[4px]">
+                className="text-white mr-4 hover:bg-[--primary-bg] duration-200 pl-5 px-4 py-2 flex justify-between items-center bg-[--primary-orange] font-medium w-full text-left rounded-[4px]">
                 View Cart
                 <span className="top-1/2 right-0 h-[37px] flex px-[10px] text-sm text-[--primary-orange] bg-white font-medium rounded-[4px] items-center">
                   $ {totalPrice.toFixed(2)}

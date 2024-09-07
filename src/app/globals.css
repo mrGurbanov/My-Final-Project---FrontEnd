@@ -14,7 +14,7 @@
   --border: #43474e;
   --product-text-clr: #212121;
   --view-cart-bg: #f4f5f8;
-  
+  --register-shadow: rgba(0, 0, 0, 0.06) 0px 0px 12px 3px;
 }
 
 * {
@@ -146,9 +146,13 @@
   padding: 0;
 }
 
+#email:focus, #password:focus, #first-name:focus ,#last-name:focus, #phone:focus {
+  border-color: var(--primary-orange);
+}
 
-
-
+.create , .forget {
+  padding-inline: 15px;
+}
 
 
 

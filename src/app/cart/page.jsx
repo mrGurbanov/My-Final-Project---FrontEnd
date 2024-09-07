@@ -132,7 +132,7 @@ export default () => {
                         </Flex>
                       </Flex>
                       <Flex className="px-[15px] grow text-right" justifyContent={"space-between"}>
-                        <Link href={"/login"}>
+                        <Link href={"/sign-in"}>
                           <Flex
                             as="button"
                             display={"inline-block"}
