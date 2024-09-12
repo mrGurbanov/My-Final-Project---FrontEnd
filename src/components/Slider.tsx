@@ -55,7 +55,7 @@ const Slider: React.FC<DemoSliderProps> = ({ data }) => {
                       {title}
                     </p>
                     <p>
-                      Torem ipsum dolor sit amet, consectetur adipisicing elitsed do eiusmo tempor
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elitsed do eiusmo tempor
                       incididunt ut labore et dolore magna
                     </p>
                     {buttons.length > 0 ? (

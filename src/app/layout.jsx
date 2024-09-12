@@ -1,6 +1,7 @@
 import "./globals.css";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import CartButton from "../components/CartButton";
 import { CartProvider } from "../components/CartContext";
 import Head from "next/head";
 
@@ -23,6 +24,7 @@ export default function RootLayout({ children }) {
       <body className="overflow-visible">
         <CartProvider>
           <Header />
+          <CartButton/>
           {children}
           <Footer />
         </CartProvider>

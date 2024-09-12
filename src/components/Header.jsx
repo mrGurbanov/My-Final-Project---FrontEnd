@@ -18,6 +18,9 @@ export default () => {
   const [openSearch, setOpenSearch] = useState(false);
   const [openCart, setOpenCart] = useState(false);
 
+  const [selectLang, setIsSelectLang] = useState("English");
+  const [selectMoney, setIsSelectMoney] = useState("USD");
+
   const toggleOpenSearch = () => {
     setOpenSearch(!openSearch);
   };
@@ -42,7 +45,7 @@ export default () => {
                   as="button"
                   onClick={() => setIsOpen(!isOpen)}
                   className="hover:text-[--primary-orange] duration-200">
-                  English
+                  {selectLang}
                   <FaChevronDown className="ml-1 duration-300" />
                 </Flex>
                 {isOpen && (
@@ -52,16 +55,16 @@ export default () => {
                     direction={"column"}
                     alignItems="none"
                     className="top-dropdown absolute z-10 overflow-hidden duration-[400] px-[15px] top-[35px] text-[--primary-text-clr] [&>li]:border-b border-[235, 235, 235] bg-white">
-                    <li className="dorpdown-item px-3 py-2 hover:text-[--primary-orange] duration-200">
+                    <li className="dorpdown-item px-3 py-2 hover:text-[--primary-orange] duration-200" onClick={() => setIsSelectLang("English")}>
                       <Link href="/">English</Link>
                     </li>
-                    <li className="dorpdown-item px-3 py-2 hover:text-[--primary-orange] duration-200">
+                    <li className="dorpdown-item px-3 py-2 hover:text-[--primary-orange] duration-200" onClick={() => setIsSelectLang("Italiano")}>
                       <Link href="/">Italiano</Link>
                     </li>
-                    <li className="dorpdown-item px-3 py-2 hover:text-[--primary-orange] duration-200">
+                    <li className="dorpdown-item px-3 py-2 hover:text-[--primary-orange] duration-200" onClick={() => setIsSelectLang("Français")}>
                       <Link href="/">Français</Link>
                     </li>
-                    <li className="dorpdown-item px-3 py-2 hover:text-[--primary-orange] duration-200 border-none">
+                    <li className="dorpdown-item px-3 py-2 hover:text-[--primary-orange] duration-200 border-none" onClick={() => setIsSelectLang("Türkçe")}>
                       <Link href="/">Türkçe</Link>
                     </li>
                   </Flex>
@@ -72,7 +75,7 @@ export default () => {
                   as="button"
                   onClick={() => setOpen(!Open)}
                   className="hover:text-[--primary-orange] duration-200">
-                  USD
+                  {selectMoney}
                   <FaChevronDown className="ml-1 duration-300" />
                 </Flex>
                 {Open && (
@@ -81,16 +84,16 @@ export default () => {
                     direction={"column"}
                     alignItems="none"
                     className="top-dropdown absolute z-10 overflow-hidden duration-[400] px-[15px] top-[35px] text-[--primary-text-clr] [&>li]:border-b border-[235, 235, 235] bg-white">
-                    <li className="dorpdown-item px-3 py-2 hover:text-[--primary-orange] duration-200">
+                    <li className="dorpdown-item px-3 py-2 hover:text-[--primary-orange] duration-200" onClick={() => setIsSelectMoney("USD")}>
                       <Link href="/">$ - USD</Link>
                     </li>
-                    <li className="dorpdown-item px-3 py-2 hover:text-[--primary-orange] duration-200">
+                    <li className="dorpdown-item px-3 py-2 hover:text-[--primary-orange] duration-200" onClick={() => setIsSelectMoney("EUR")}>
                       <Link href="/">Є - EUR</Link>
                     </li>
-                    <li className="dorpdown-item px-3 py-2 hover:text-[--primary-orange] duration-200">
+                    <li className="dorpdown-item px-3 py-2 hover:text-[--primary-orange] duration-200" onClick={() => setIsSelectMoney("POUND")}>
                       <Link href="/">£ - POUND</Link>
                     </li>
-                    <li className="dorpdown-item px-3 py-2 hover:text-[--primary-orange] duration-200 border-none">
+                    <li className="dorpdown-item px-3 py-2 hover:text-[--primary-orange] duration-200 border-none" onClick={() => setIsSelectMoney("TRY")}>
                       <Link href="/">₺ - TRY</Link>
                     </li>
                   </Flex>

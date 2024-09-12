@@ -155,5 +155,13 @@
 }
 
 
-
+.cartButton {
+  z-index: 10;
+  top: calc(30% + 110px);
+  box-shadow: rgba(0, 0, 0, 0.75) 0px 0px 16px -1px;
+  background-color: var(--primary-bg);
+  font-weight: 600;
+  cursor: pointer;
+  transition: 400ms;
+}
 

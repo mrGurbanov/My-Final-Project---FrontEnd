@@ -54,15 +54,23 @@ export default () => {
                 <button
                   type="submit"
                   className="text-white duration-300 py-[17px] px-9 bg-[--primary-orange] w-full hover:bg-[--primary-bg] mb-[25px]">
-                  Sign in
+                  <Link href={"/"} className="inline-block w-full">Sign in</Link>
                 </button>
                 <Flex>
                   <Flex className="grow -mx-[15px]" justifyContent={"space-between"}>
                     <Flex className="create">
-                      <Link href={"/sign-up"} className=" py-[17px] px-9 w-full text-sm duration-300 text-white hover:text-[--primary-bg] bg-[--primary-bg] hover:bg-[--border-clr]">Create an Account</Link>
+                      <Link
+                        href={"/sign-up"}
+                        className=" py-[17px] px-9 w-full text-sm duration-300 text-white hover:text-[--primary-bg] bg-[--primary-bg] hover:bg-[--border-clr]">
+                        Create an Account
+                      </Link>
                     </Flex>
                     <Flex className="forget">
-                      <Link href={"/"} className=" py-[17px] px-9 w-full text-sm duration-300 text-[--primary-bg] hover:text-white bg-[--border-clr] hover:bg-[--primary-bg]">Forget Password?</Link>
+                      <Link
+                        href={"/"}
+                        className=" py-[17px] px-9 w-full text-sm duration-300 text-[--primary-bg] hover:text-white bg-[--border-clr] hover:bg-[--primary-bg]">
+                        Forget Password?
+                      </Link>
                     </Flex>
                   </Flex>
                 </Flex>
