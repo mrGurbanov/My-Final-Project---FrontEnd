@@ -8,6 +8,7 @@ import "../app/globals.css";
 import NewArrival from "./NewArrival";
 import OnSale from "./OnSale";
 import Featured from "./Featured";
+import Tending from "./Tending";
 import {products} from "../app/data/product-data"
 function CustomTabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -69,7 +70,7 @@ export default function BasicTabs() {
         <OnSale product={products} />
       </CustomTabPanel>
       <CustomTabPanel value={value} index={3}>
-        Tending
+        <Tending/>
       </CustomTabPanel>
     </Box>
   );

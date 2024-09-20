@@ -11,7 +11,7 @@ import { LiaTelegram } from "react-icons/lia";
 export default function Footer({ buttons }) {
   return (
     <>
-    <div className="footer bg-[--primary-bg] py-[100px]">
+    <div className="footer bg-[--primary-bg] py-[100px] mt-[100px]">
       <Flex className="container" alignItems="none">
         <div className="col-about w-1/3 px-[15px] text-white">
           <h4 className="text-[15px] mb-[15px] font-semibold">ABOUT US</h4>
