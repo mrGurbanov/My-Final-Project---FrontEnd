@@ -3,7 +3,7 @@ export const products = [
         id: 1,
         name: "High Quality Fabric Sofa",
         image: "https://berkowitz.com.au/wp-content/uploads/2018/02/Nora-2.jpg",
-        price: 1199.99,
+        price: 1199,
         category: "Sofa",
         productDetail :{
             description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, illoat. Repudiandae ratione impedit delectus consectetur. Aspernaturvero obcaecati placeat ab distinctio unde ipsam molestias atqueratione delectus blanditiis nemo eius dignissimos doloremque quaealiquid maiores id tempore consequatur, quod pariatur saepe.',

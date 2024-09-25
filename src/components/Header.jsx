@@ -10,6 +10,7 @@ import { useState } from "react";
 import SearchBar from "./SearchBar";
 import CartMenu from "./CartMenu";
 import { useCart } from "./CartContext";
+import { useWishlist } from "./WhisListContext";
 
 export default () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -30,6 +31,7 @@ export default () => {
   };
 
   const { cart } = useCart();
+  const { wishlist } = useWishlist()
 
   return (
     <div className="relative">

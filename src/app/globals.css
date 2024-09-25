@@ -179,15 +179,135 @@
 }
 
 .ct {
-  /* flex: 0 0 33.33%;
-  max-width: 33.33%; */
-  width: 33.33%;
+  flex: 0 0 40%;
+  width: 100%;
 }
 .gt {
-  /* flex: 0 0 66.66%;
-  max-width: 66.66%; */
-  width: 66.66%;
+  width: 100%;
+  flex: 0 0 60%;
 }
 .contact-wrapper {
   margin-inline: calc(-15px);
+  /* column-gap: 15px; */
+}
+
+#firstname, #lastname, #subject, #message {
+  width: 100%;
+  padding: 12px 15px;
+  font-size: 14px;
+  border-radius: 4px;
+  border: 1px solid var( --border-clr);
+  outline: none;
+  transition: .4s ease;
+
+  &:focus {
+    border-color: var(--primary-orange);
+  }
+}
+#message {
+  min-height: 80px;
+}
+
+.btn-single-product > div:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+figure:hover {
+  > .cart-icons > .btn-single-product {
+    > .action-icon{
+      transform: translateY(0);
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+  button {
+    transform: translateY(0);
+    visibility: visible;
+    opacity: 1;
+  } 
+    
+}
+
+.action-icon {
+  transform: translateY(20px);
+  opacity: 0;
+  visibility: hidden;
+  transition: .4s;
+  }
+
+
+.btn-action {
+  width: 40px;
+  height: 40px;
+  transition: .4s;
+  color: var(--product-text-clr);
+  border-radius: 50%;
+  background-color: white;
+  cursor: pointer;
+
+  &:hover {
+    background-color: var(--primary-orange);
+    color: white;
+
+    & + .action {
+      opacity: 1;
+    }
+  }
+}
+.action {
+  padding: 2px 5px;
+  right: 40px;
+  font-size: 12px;
+  opacity: 0;
+  transition: .4s;
+  width: max-content;
+  background-color: black;
+  color: white;
+  display: inline-flex;
+  border-radius: 4px;
+  z-index: 9;
+  margin-right: 8px;
+
+  &::before {
+    content: '';
+    z-index: -1;
+    background: black;
+    width: 10px;
+    height: 10px;
+    position: inherit;
+    right: -2px;
+    top: 6px;
+    rotate: 45deg;
+  }
+}
+
+.addToCartBtn {
+  width: 80%;
+  z-index: 11;
+  text-align: center;
+  margin: 10px auto 0px;
+  transition: .4s;
+  border-radius: 4px;
+  font-weight: 600;
+  left: 0;
+  right: 0;
+  bottom: 80px;
+  height: 35px;
+  opacity: 0;
+  display: block;
+  line-height: 35px;
+  position: absolute;
+  visibility: hidden;
+  transform: translateY(20px);
+  color: var(--primary-bg);
+  font-size: 14px;
+  background-color: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &:hover {
+    color: var(--primary-orange);
+  }
 }

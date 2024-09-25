@@ -27,7 +27,7 @@ export default function CartButton() {
           <span className="text-white text-sm">{cart.length} Items</span>
         </Flex>
         <Flex className="mt-1">
-          <span className="w-[65px] h-[25px] px-[5px] leading-6 text-[--primary-orange] bg-white rounded-[4px] text-sm font-bold">
+          <span className="CartButton-toFixed w-[65px] h-[25px] px-[5px] leading-6 text-[--primary-orange] bg-white rounded-[4px] text-sm font-bold">
             $ {totalPrice}
           </span>
         </Flex>

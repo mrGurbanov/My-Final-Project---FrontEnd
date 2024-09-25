@@ -1,48 +1,107 @@
 // ProductCard.js
-'use client'
-import Link from 'next/link';
-import { useCart } from './CartContext';
-import Flex from './Flex';
+"use client";
+import Link from "next/link";
+import { useCart } from "./CartContext";
+import { useWishlist } from "./WhisListContext";
+import Flex from "./Flex";
+import { FaRegHeart } from "react-icons/fa";
+import { useState } from "react";
+import { MdDeleteForever, MdShoppingCart } from "react-icons/md";
+import { BiExpand, BiGitCompare } from "react-icons/bi";
 
-export default function ProductCart({product}) {
+export default function ProductCart({ product }) {
   const { addToCart } = useCart();
+  const { addToWishlist, removeFromWishlist } = useWishlist();
 
   const handleAddToCart = () => {
     addToCart(product);
   };
 
-
-  return (
-    <Flex
-            as='article'
-            direction={'column'}
-            alignItems={"stretch"}
-            justifyContent={'space-between'}
-            className=" p-4 rounded-xl h-[350px]" 
-            >
-                <div className="relative w-full">
-                    <Link href={`/product/${product.id}`}>
-                        <img 
-                            className="w-full h-[150px] object-contain rounded-lg rounded-b-none" 
-                            src={product.image} 
-                            alt="product-img" 
-                        />
-                    </Link>
-                    <span className="absolute capitalize -top-2 right-[-10px] text-[12px] bg-[black] text-white rounded-md px-2 ">{product.category}</span>
-                </div>
-                <div alignitems={"flex-start"} className="w-full">
-                    <h3 className="truncate text-black font-semibold">{product.name}</h3>
-                    <span>{product.price} $</span>
-                    <span className="ml-3 [&>i]:text-[#FFD43B]" >
-                        <i className="fa-solid fa-star"></i>
-                        <i className="fa-solid fa-star"></i>
-                        <i className="fa-solid fa-star"></i>
-                        <i className="fa-solid fa-star"></i>
-                        <i className="fa-solid fa-star"></i>
-                    </span>
-                </div>
-                <button onClick={handleAddToCart} className='text-center bg-black text-white py-2 px-14 rounded-md whitespace-nowrap'>Add to Cart</button>
-            </Flex>
-  );
+const handleAddToWishlist = () => {
+  addToWishlist(product);
+  setDeleteIcon(!heartIcon);
+  removeFromWishlist(product)
 };
 
+  const [heartIcon, setDeleteIcon] = useState(true);
+  const [compareIcon, setisDeleteIcon] = useState(true);  
+
+  const toogleCompareIcons = () => {
+    setisDeleteIcon(!compareIcon);
+  };
+
+  const [openIsModal, setISOpenModal] = useState(false);
+
+  const toggleModal = () => {
+    setISOpenModal(!openIsModal);
+  };
+
+  return (
+    <div className="px-[15px] relative bg-[--view-cart-bg]">
+      <div className="mt-[30px] overflow-hidden">
+        <figure className="overflow-hidden">
+          <Flex justifyContent={"center"} className="thumb ">
+            <Link href={`/product/${product.id}`}>
+              <img className="object-fill h-[200px]" src={product.image} alt="thumb" />
+            </Link>
+          </Flex>
+          <Flex
+            direction={"column"}
+            className="cart-icons absolute top-[32px] right-[24px] duration-500">
+            <Flex direction={"column"} className="btn-single-product relative">
+              <Flex>
+                <Flex
+                  // onClick={multiTask}
+                  onClick={handleAddToWishlist}
+                  as="button"
+                  justifyContent={"center"}
+                  className="btn-action">
+                  {heartIcon ? (
+                    <FaRegHeart />
+                  ) : (
+                    <MdDeleteForever className="text-[--primary-orange] hover:text-white" />
+                  )}
+                </Flex>
+                <Flex className="action absolute">{heartIcon ? "Add" : "Remove"} to Wishlist</Flex>
+              </Flex>
+              <Flex className="action-icon">
+                <Flex
+                  onClick={toggleModal}
+                  as="button"
+                  justifyContent={"center"}
+                  className="btn-action">
+                  <BiExpand />
+                </Flex>
+                <Flex className="action absolute">Quick view</Flex>
+              </Flex>
+              <Flex className="action-icon">
+                <Flex
+                  onClick={toogleCompareIcons}
+                  as="button"
+                  justifyContent={"center"}
+                  className="btn-action">
+                  {compareIcon ? (
+                    <BiGitCompare />
+                  ) : (
+                    <MdDeleteForever className="text-[--primary-orange] hover:text-white" />
+                  )}
+                </Flex>
+                <Flex className="action absolute">{compareIcon ? "Add" : "Remove"} to Compare</Flex>
+              </Flex>
+            </Flex>
+          </Flex>
+          <button onClick={handleAddToCart} className="addToCartBtn w-full">
+            <MdShoppingCart className="mr-2" /> Add To Cart
+          </button>
+          <Flex direction={"column"} justifyContent={"center"} className="px-[15px] pt-5">
+            <h2 className="hover:text-[--primary-orange] duration-300">{product.name}</h2>
+            <div className="font-medium">
+              <del className="mr-2 text-[#999]">${product.price + 11}</del>
+              <span>${product.price}</span>
+            </div>
+          </Flex>
+        </figure>
+      </div>
+    </div>
+  );
+}

@@ -15,10 +15,10 @@ export default ({ isOpen, onClose }) => {
         <div className="fixed inset-0 bg-black bg-opacity-50 z-40" onClick={onClose}></div>
       )}
       <div
-        className={`fixed top-0 right-0 h-full w-[430px] bg-white shadow-lg z-50 transform transition-transform duration-300 ease-in-out ${
+        className={`fixed top-0 right-0 h-full w-[430px] overflow-y-auto bg-white shadow-lg z-50 transform transition-transform duration-300 ease-in-out ${
           isOpen ? "translate-x-0" : "translate-x-full"
         }`}>
-        <div className="p-4 h-full">
+        <div className="p-4 overflow-y-auto">
           <div className="border-b border-[--primary-bg]">
             <h2 className="text-xl font-bold mb-4">Cart</h2>
             <button
@@ -27,7 +27,7 @@ export default ({ isOpen, onClose }) => {
               <GrFormClose />
             </button>
           </div>
-          <Flex direction={"column"} className="py-4 ">
+          <Flex direction={"column"} className="py-4 overflow-hidden">
             {cart.length === 0 ? (
               <Flex justifyContent={"center"}>
                 <Flex
@@ -65,7 +65,7 @@ export default ({ isOpen, onClose }) => {
                 ))}
               </>
             )}
-            <Flex className="p-5 w-[350px] absolute bottom-0">
+            <Flex className="cartViewButton p-5 w-[350px] fixed bottom-0">
               <Link
                 href={"/cart"}
                 className="text-white mr-4 hover:bg-[--primary-bg] duration-200 pl-5 px-4 py-2 flex justify-between items-center bg-[--primary-orange] font-medium w-full text-left rounded-[4px]">
