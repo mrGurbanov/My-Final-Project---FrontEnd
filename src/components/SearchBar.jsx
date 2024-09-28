@@ -10,7 +10,7 @@ export default ({ isOpen, onClose }) => {
         <Flex
           onClick={onClose}
           alignItems="flex-start"
-          className=" fixed inset-0 w-fultop-0 duration-300 z-40 bg-[--bg-shadow]"></Flex>
+          className=" fixed inset-0 w-full top-0 duration-300 z-40 bg-[--bg-shadow]"></Flex>
       )}
 
       <Flex alignItems="start" className={`fixed top-0 pt-[30px] px-[25px] z-50 pb-[25px] duration-500 bg-white w-full ${

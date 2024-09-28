@@ -31,7 +31,6 @@ export default () => {
   };
 
   const { cart } = useCart();
-  const { wishlist } = useWishlist()
 
   return (
     <div className="relative">

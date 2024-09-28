@@ -6,17 +6,16 @@ import { useCart } from "../../components/CartContext";
 import { useWishlist } from "../../components/WhisListContext";
 import { HiOutlineShoppingBag } from "react-icons/hi2";
 import { MdDeleteForever } from "react-icons/md";
-// import { products } from "../../app/data/product-data";
 
 export default () => {
   const { addToCart } = useCart();
 
   const {  wishlist, removeFromWishlist } = useWishlist();
 
-  // const product = products.find((item) => item.id == params.productId);
 
-  const handleAddToCart = () => {
-    addToCart(product);
+  const handleAddToCart = (id) => {    
+    let selectedProductToAddToCart = wishlist.find(w => w.id === id);
+    addToCart(selectedProductToAddToCart);
   };
 
   return (
@@ -86,7 +85,7 @@ export default () => {
                               $ {item.price}
                             </td>
                             <td className="p-3 align-middle w-[200px] text-[12px] text-center">
-                                <button onClick={handleAddToCart} className="p-[10px] bg-[--primary-orange] text-white hover:bg-[--primary-bg] duration-300 rounded-[4px]">Add To Cart</button>
+                                <button onClick={() => handleAddToCart(item.id)} className="p-[10px] bg-[--primary-orange] text-white hover:bg-[--primary-bg] duration-300 rounded-[4px]">Add To Cart</button>
                             </td>
                             <td className="p-3 align-middle text-center ">
                               <button
