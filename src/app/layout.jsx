@@ -5,6 +5,7 @@ import CartButton from "../components/CartButton";
 import { CartProvider } from "../components/CartContext";
 import Head from "next/head";
 import { WishlistProvider } from "../components/WhisListContext";
+import { Toaster } from "react-hot-toast";
 
 export const metadata = {
   title: "My Final Project",
@@ -22,7 +23,16 @@ export default function RootLayout({ children }) {
           referrerpolicy="no-referrer"
         />
       </Head>
-      <body className="overflow-visible">
+      <body className="overflow-visible"> 
+        <Toaster toastOptions={
+          {
+            position:"top-right",
+            style: {
+              backgroundColor: "#777",
+              color: "white",
+            }
+          }
+        }/>
         <CartProvider>
           <WishlistProvider>
             <Header />

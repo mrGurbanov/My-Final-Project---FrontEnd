@@ -220,7 +220,7 @@ figure:hover {
       opacity: 1;
     }
   }
-  button {
+  > .addToCartBtn {
     transform: translateY(0);
     visibility: visible;
     opacity: 1;
@@ -309,5 +309,24 @@ figure:hover {
 
   &:hover {
     color: var(--primary-orange);
+  }
+}
+
+.close-btn {
+  position: absolute;
+  text-align: center;
+  top: 16px;
+  right: 16px;
+  color: var(--primary-orange);
+  padding: 4px;
+  background-color: transparent;
+  border: 1px solid var(--primary-orange);
+  border-radius: 6px;
+  transition: .2s;
+  cursor: pointer;
+
+  &:hover {
+    background-color: var(--primary-orange);
+    color: white;
   }
 }

@@ -1,5 +1,5 @@
 "use client";
-import { GrFormClose } from "react-icons/gr";
+import { IoCloseOutline } from "react-icons/io5";
 import { useCart } from "./CartContext";
 import { HiOutlineShoppingBag } from "react-icons/hi2";
 import { MdDeleteForever } from "react-icons/md";
@@ -23,8 +23,8 @@ export default ({ isOpen, onClose }) => {
             <h2 className="text-xl font-bold mb-4">Cart</h2>
             <button
               onClick={onClose}
-              className="absolute text-center top-4 right-4 text-[--primary-orange] p-1 bg-transparent border border-[--primary-orange] rounded-md hover:bg-[--primary-orange] hover:text-white duration-200">
-              <GrFormClose />
+              className="close-btn ">
+              <IoCloseOutline />
             </button>
           </div>
           <Flex direction={"column"} className="py-4 overflow-hidden">

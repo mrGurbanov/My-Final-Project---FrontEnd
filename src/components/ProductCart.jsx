@@ -12,24 +12,26 @@ import { BiExpand, BiGitCompare } from "react-icons/bi";
 
 export default function ProductCart({ product }) {
   const { addToCart } = useCart();
-  const { addToWishlist, removeFromWishlist } = useWishlist();
+  const { wishlist, setWishlist , addToWishlist, removeFromWishlist } = useWishlist();
 
   const handleAddToCart = () => {
     addToCart(product);
   };
 
+  console.log(wishlist);
+  
   const handleAddToWishlist = () => {
-    addToWishlist(product);
-    setDeleteIcon(!heartIcon);
-    removeFromWishlist(product);
+    const existProduct = wishlist.some((item) => item.id === product.id)
+console.log(existProduct);
+
+    if(existProduct) {
+      removeFromWishlist(product.id);
+    }
+    else {
+      addToWishlist(product);
+    }
   };
 
-  const [heartIcon, setDeleteIcon] = useState(true);
-  const [compareIcon, setisDeleteIcon] = useState(true);
-
-  const toogleCompareIcons = () => {
-    setisDeleteIcon(!compareIcon);
-  };
 
   const [openIsModal, setISOpenModal] = useState(false);
 
@@ -55,16 +57,16 @@ export default function ProductCart({ product }) {
                   <Flex
                     onClick={handleAddToWishlist}
                     as="button"
-                    justifyContent={"center"}
+                    justifyContent={"center"} 
                     className="btn-action">
-                    {heartIcon ? (
+                    {!wishlist.some((item) => item.id === product.id ) ? (
                       <FaRegHeart />
                     ) : (
                       <MdDeleteForever className="text-[--primary-orange] hover:text-white" />
                     )}
                   </Flex>
                   <Flex className="action absolute">
-                    {heartIcon ? "Add" : "Remove"} to Wishlist
+                    {!wishlist.some((item) => item.id === product.id ) ? "Add" : "Remove"} to Wishlist
                   </Flex>
                 </Flex>
                 <Flex className="action-icon">
@@ -79,18 +81,18 @@ export default function ProductCart({ product }) {
                 </Flex>
                 <Flex className="action-icon">
                   <Flex
-                    onClick={toogleCompareIcons}
+                    // onClick={toogleCompareIcons}
                     as="button"
                     justifyContent={"center"}
                     className="btn-action">
-                    {compareIcon ? (
+                    {!wishlist.some((item) => item.id === product.id) ? (
                       <BiGitCompare />
                     ) : (
                       <MdDeleteForever className="text-[--primary-orange] hover:text-white" />
                     )}
                   </Flex>
                   <Flex className="action absolute">
-                    {compareIcon ? "Add" : "Remove"} to Compare
+                    {/* {!wishlist.some((item) => item.id === product.id) ? "Add" : "Remove"} to Compare */}
                   </Flex>
                 </Flex>
               </Flex>

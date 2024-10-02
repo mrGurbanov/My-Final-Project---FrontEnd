@@ -119,7 +119,7 @@ export default function ProductModals({ isOpen, onClose, product }) {
                         type="number"
                         value={quantity}
                         onChange={(e) => setQuantity(Number(e.target.value))}
-                        className="w-16 text-center border-t border-b border-gray-200 py-1 [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none outline-none"
+                        className="w-10 text-[15px] text-center border-t border-b border-gray-200 py-1 [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none outline-none"
                       />
                       <button
                         onClick={incrementQuantity}

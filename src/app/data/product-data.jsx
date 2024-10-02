@@ -15,7 +15,7 @@ export const products = [
         id: 2,
         name: "Imported Side Console Table",
         image: "https://images.pexels.com/photos/280471/pexels-photo-280471.jpeg?cs=srgb&dl=pexels-pixabay-280471.jpg&fm=jpg",
-        price: 79.99,
+        price: 79,
         category: "Table",
         productDetail :{
             description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, illoat. Repudiandae ratione impedit delectus consectetur. Aspernaturvero obcaecati placeat ab distinctio unde ipsam molestias atqueratione delectus blanditiis nemo eius dignissimos doloremque quaealiquid maiores id tempore consequatur, quod pariatur saepe.',

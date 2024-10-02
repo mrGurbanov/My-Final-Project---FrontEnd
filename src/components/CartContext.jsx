@@ -1,5 +1,6 @@
 'use client'
 import React, { createContext, useState, useContext, useEffect } from 'react';
+import {toast} from "react-hot-toast";
 
 const CartContext = createContext();
 
@@ -34,6 +35,7 @@ export const CartProvider = ({ children }) => {
       }
       return [...prevCart, { ...product, quantity: 1 }];
     });
+    toast.success("Product added to Cart")
   };
 
   const updateQuantity = (productId, newQuantity) => {
