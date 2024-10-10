@@ -24,6 +24,8 @@ export default function RootLayout({ children }) {
         />
       </Head>
       <body className="overflow-visible"> 
+        <CartProvider>
+          <WishlistProvider>
         <Toaster toastOptions={
           {
             position:"top-right",
@@ -33,8 +35,6 @@ export default function RootLayout({ children }) {
             }
           }
         }/>
-        <CartProvider>
-          <WishlistProvider>
             <Header />
             <CartButton />
             {children}

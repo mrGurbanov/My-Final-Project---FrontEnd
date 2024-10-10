@@ -1,7 +1,6 @@
 import Link from "next/link";
 import Flex from "./Flex";
 import Box from "@mui/material/Box";
-import Typography from "@mui/material/Typography";
 import Modal from "@mui/material/Modal";
 import ModalSlider from "./ModalSlider";
 import { GrFormClose } from "react-icons/gr";
@@ -21,7 +20,7 @@ const style = {
   bgcolor: "background.paper",
   border: "2px solid #000",
   boxShadow: 24,
-  p: 4,
+  // p: 4,
 };
 
 
@@ -49,10 +48,10 @@ export default function ProductModals({ isOpen, onClose, product }) {
       {isOpen && (
         <Flex
           onClick={onClose}
-          className=" fixed inset-0 w-fultop-0 duration-300 z-40 bg-[--bg-shadow]"></Flex>
+          className=" fixed inset-0 w-full top-0 duration-300 z-40 bg-[--bg-shadow]"></Flex>
       )}
 
-      <Flex className={`fixed top-0 pt-[30px] px-[25px] z-50 pb-[25px] duration-500 w-full`}>
+      <Flex className="fixed top-0 pt-[30px] px-[25px] -z-40 pb-[25px] duration-500 w-full">
         <Modal
           open={isOpen}
           onClose={onClose}
